@@ -19,7 +19,7 @@
         <form method="post" action="Connexion">
             <fieldset>
                 <legend>Connexion</legend>
-                <p>Veuillez vous connectez a votre compte.</p>
+                <p>Veuillez vous connectez à votre compte.</p>
                 <label for="email">Adresse email <span
                         class="requis">* </span></label>
                 <input type="email" id="email" name="email" value="<c:out
