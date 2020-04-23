@@ -24,7 +24,7 @@ public class hachage {
 
         byte byteData[] = md.digest();
 
-        //convertir le tableau de bits en une format hexadécimal - méthode 1
+        //convertir le tableau de bits en une format hexadécimal
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < byteData.length; i++) {
          sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
