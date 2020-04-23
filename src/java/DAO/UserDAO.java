@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static util.hachage.hacher;
 
 /**
  *
@@ -35,12 +36,12 @@ public class UserDAO extends DAO<Utilisateur>{
             ResultSet result = pstmt.executeQuery();
             if (result.first()) {
                 utilisateur = new Utilisateur(
-                        result.getString("email"),
+                        result.getString("emailMenbre"),
                         result.getString("motDePasse"),
                         id,
                         result.getString("nom"),
                         result.getString("prenom"),
-                        result.getBoolean("true"));
+                        result.getBoolean("statut"));
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -57,11 +58,13 @@ public class UserDAO extends DAO<Utilisateur>{
             PreparedStatement pstmt = connection.prepareStatement(req);
             pstmt.setString(1, uti.getNom());
             pstmt.setString(2, uti.getPrenom());
-            pstmt.setString(3, uti.getMotDePasse());
+            pstmt.setString(3, hacher(uti));
             pstmt.setString(4, uti.getEmail());
             
             pstmt.executeUpdate();
         } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -70,11 +73,15 @@ public class UserDAO extends DAO<Utilisateur>{
     public void update(Utilisateur upt) {
         
         try {
-            String req = "UPDATE Utilisateur SET motDePasse=? WHERE id=?";
+            String req = "UPDATE Utilisateur SET motDePasse=?, statut=? WHERE id=?";
         PreparedStatement pstmt = connection.prepareStatement(req);
-        pstmt.setString(1, upt.getMotDePasse());
+        pstmt.setString(1, hacher(upt));
+        pstmt.setBoolean(2, upt.isOn());
+        pstmt.setInt(3, upt.getId());
         pstmt.executeUpdate();
         } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
         }     
     }  
