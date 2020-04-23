@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Accueil", urlPatterns = {"/Accueil"})
 public class Accueil extends HttpServlet {
+    
+    private static final long serialVersionUID = 1L;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

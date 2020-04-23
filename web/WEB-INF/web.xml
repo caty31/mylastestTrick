@@ -9,15 +9,24 @@
     <servlet>
         <servlet-name>Connexion</servlet-name>
         <servlet-class>servlets.Connexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/Connexion</url-pattern>    
+    </servlet-mapping>
+    
+    
+    <!--mapping servlet accueil-->
+    <servlet>
         <servlet-name>Accueil</servlet-name>
         <servlet-class>servlets.Accueil</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Connexion</servlet-name>
-        <url-pattern>/Connexion</url-pattern>
         <servlet-name>Accueil</servlet-name>
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
+    
+    
     <session-config>
         <session-timeout>
             30

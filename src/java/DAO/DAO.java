@@ -24,10 +24,10 @@ public abstract class DAO<T> {
     
     
     //fonction permettant de creer un inscrit
-    public abstract T create(T uti);
+    public abstract void create(T uti);
     
     //permet de mettre à jour les données dans la database
-    public abstract T update(T upt);
+    public abstract void update(T upt);
     
     //permet de supprimer des données de la database
     public abstract void delete(Integer id);

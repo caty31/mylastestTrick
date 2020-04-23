@@ -6,6 +6,12 @@
 
 package beans;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 /**
  *
  * @author Will I Am
@@ -18,7 +24,7 @@ public class Utilisateur {
     private Integer id;
     private String nom;
     private String prenom;
-    private boolean on; 
+    private boolean on = true; 
     
     
     //constructeur
@@ -33,6 +39,19 @@ public class Utilisateur {
         this.nom = nom;
         this.prenom = prenom;
         this.on = on;
+    }
+    
+    public Utilisateur(ResultSet set) {
+        try {
+            this.email = set.getString("emailMenbre");
+            this.id = set.getInt("id");
+            this.motDePasse = set.getString("motDePasse");
+            this.nom = set.getString("nom");
+            this.prenom = set.getString("prenom");
+            this.on = set.getBoolean("statut");
+        } catch (SQLException ex) {
+            Logger.getLogger(Utilisateur.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 

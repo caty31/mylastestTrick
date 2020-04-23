@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-   
+
     <!--mapping servlet connexion-->
     <servlet>
         <servlet-name>Connexion</servlet-name>
@@ -12,19 +12,32 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Connexion</servlet-name>
-        <url-pattern>/Connexion</url-pattern>
+        <url-pattern>/Connexion</url-pattern>    
     </servlet-mapping>
+    
+    
+    <!--mapping servlet accueil-->
+    <servlet>
+        <servlet-name>Accueil</servlet-name>
+        <servlet-class>servlets.Accueil</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Accueil</servlet-name>
+        <url-pattern>/Accueil</url-pattern>
+    </servlet-mapping>
+    
+    
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
             <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
         </jsp-property-group>
     </jsp-config>
-    
+
 </web-app>
