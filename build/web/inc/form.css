@@ -6,9 +6,9 @@ body, p, legend, label, input {
 fieldset {
     padding: 10px;
     border: 1px #0568CD solid;
-    background-color: buttonface;
+    background-color: buttonhighlight;
     border-radius: 15px;
-}
+    margin-right:50%;}
 
 legend {
     font-weight: bold;
@@ -44,5 +44,4 @@ form .requis {
 .succes{
     color:green;
 }
-
 

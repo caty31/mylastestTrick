@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : erreur
     Created on : 21 avr. 2020, 13:00:56
     Author     : stag
@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Erreur !</h1>
+        <p>La page recherché n'est pas disponnible ou n'existe pas.</p>
     </body>
 </html>
