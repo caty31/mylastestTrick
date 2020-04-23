@@ -15,6 +15,15 @@
         <url-pattern>/Connexion</url-pattern>    
     </servlet-mapping>
     
+    <!--mapping servlet connexion-->
+    <servlet>
+        <servlet-name>Deconnexion</servlet-name>
+        <servlet-class>servlets.Deconnexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
     
     <!--mapping servlet accueil-->
     <servlet>
