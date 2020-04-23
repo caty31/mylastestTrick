@@ -8,7 +8,8 @@ fieldset {
     border: 1px #0568CD solid;
     background-color: buttonhighlight;
     border-radius: 15px;
-    margin-right:50%;}
+    margin-right:50%;
+}
 
 legend {
     font-weight: bold;
