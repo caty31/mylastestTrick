@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Accueil", urlPatterns = {"/Accueil"})
 public class Accueil extends HttpServlet {
+    
+    private static final long serialVersionUID = 1L;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
