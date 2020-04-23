@@ -20,6 +20,7 @@ import java.util.logging.Logger;
  *
  * @author Will I Am
  */
+
 public class SQLConnection {
 
     private static Connection connection;
