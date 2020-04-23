@@ -1,5 +1,6 @@
 body, p, legend, label, input {
-    font: normal 8pt verdana, helvetica, sans-serif;
+    font: normal 14pt verdana, helvetica, sans-serif;
+    background-color: blue;
 }
 
 fieldset {
@@ -23,6 +24,7 @@ form label {
 form input {
     margin: 3px 3px 0px 0px;
     border: 1px #999 solid;
+
 }
 
 form input.sansLabel {
@@ -40,3 +42,7 @@ form .requis {
 .succes{
     color:green;
 }
+.formInscription{
+    background-color: blueviolet;
+}
+
