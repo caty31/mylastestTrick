@@ -13,7 +13,8 @@
         <title>Inscription</title>
         <link type="text/css" rel="stylesheet" href="<c:url value="/inc/form.css"/>" />
     </head>
-    <body>
+    <body class="formInscription">
+        <%@include file="/WEB-INF/template/header.jsp" %>
         <form method="post" action="inscription">
             <fieldset>
                 <legend>Inscription</legend>
@@ -61,5 +62,6 @@
             </fieldset>
 
         </form>
+        <%@include file="/WEB-INF/template/footer.jsp" %>
     </body>
 </html>
