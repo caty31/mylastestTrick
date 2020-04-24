@@ -2,14 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-
         <group>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/WEB-INF/accueil.jsp</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/src/java/beans/Post.java</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/inc/form.css</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/src/java/forms/PostCheckForm.java</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/WEB-INF/inscription.jsp</file>
+            <file>file:/home/stag/Documents/JEE/MyLatestTricks/src/java/DAO/CommentDAO.java</file>
+            <file>file:/home/stag/Documents/JEE/MyLatestTricks/src/java/beans/Commentaire.java</file>
         </group>
-
     </open-files>
 </project-private>

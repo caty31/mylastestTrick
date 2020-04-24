@@ -5,7 +5,11 @@
  */
 package beans;
 
+import static java.lang.reflect.Array.set;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -31,7 +35,14 @@ public class Commentaire {
     }
 
     public Commentaire(ResultSet res) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            this.id = res.getInt("id");
+            this.nom_membre = res.getString("nom_menbre");
+            this.contenu = res.getString("contenu");
+        } catch (SQLException ex) {
+            Logger.getLogger(Commentaire.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     public boolean isStatut() {
