@@ -6,6 +6,11 @@
 
 package beans;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Will I Am
@@ -16,6 +21,7 @@ public class Post {
     private Integer id;
     private String nom_membre;
     private String nom_video;
+    private String description;
     private Integer note_globale;
     
     
@@ -24,11 +30,24 @@ public class Post {
     public Post() {
     }
 
-    public Post(Integer id, String nom_membre, String nom_video, Integer note_globale) {
+    public Post(Integer id, String nom_membre, String nom_video, String description, Integer note_globale) {
         this.id = id;
         this.nom_membre = nom_membre;
         this.nom_video = nom_video;
+        this.description = description;
         this.note_globale = note_globale;
+    }
+    
+    public Post(ResultSet set) {
+        try {
+            this.id = set.getInt("id");
+            this.nom_membre = set.getString("nomMenbre");
+            this.nom_video = set.getString("nomVideo");
+            this.description = set.getString("description");
+            this.note_globale = set.getInt("noteGlobale");
+        } catch (SQLException ex) {
+            Logger.getLogger(Post.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     
@@ -64,6 +83,14 @@ public class Post {
 
     public void setNote_globale(Integer note_globale) {
         this.note_globale = note_globale;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
     
 
