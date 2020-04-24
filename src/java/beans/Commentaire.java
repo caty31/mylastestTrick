@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package beans;
+
+import java.sql.ResultSet;
 
 /**
  *
@@ -17,10 +18,8 @@ public class Commentaire {
     private String nom_membre;
     private String contenu;
     private boolean statut;
-    
-    
-    //constructeurs
 
+    //constructeurs
     public Commentaire() {
     }
 
@@ -29,6 +28,10 @@ public class Commentaire {
         this.nom_membre = nom_membre;
         this.contenu = contenu;
         this.statut = statut;
+    }
+
+    public Commentaire(ResultSet res) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public boolean isStatut() {
@@ -62,6 +65,5 @@ public class Commentaire {
     public void setContenu(String contenu) {
         this.contenu = contenu;
     }
-    
-    
+
 }

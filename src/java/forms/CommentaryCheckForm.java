@@ -6,7 +6,6 @@
 package forms;
 
 import beans.Commentaire;
-import beans.Utilisateur;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;

@@ -1,6 +1,5 @@
 body, p, legend, label, input {
     font: normal 10pt verdana, helvetica, sans-serif;
-
 }
 
 fieldset {
@@ -58,3 +57,9 @@ button{
     background-color: #529dff;
     border-radius: 3px;
 }
+/*
+#imgAccueil {
+    height: 150em;
+    width: 100%
+}
+*/
