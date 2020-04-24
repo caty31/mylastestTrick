@@ -46,8 +46,23 @@
         <servlet-name>Accueil</servlet-name>
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
 
 
+=======
+    
+    <!--mapping servlet inscription-->
+    <servlet>
+        <servlet-name>Inscription</servlet-name>
+        <servlet-class>servlets.Inscription</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Inscription</servlet-name>
+        <url-pattern>/Inscription</url-pattern>
+    </servlet-mapping>
+    
+    
+>>>>>>> v3
     <session-config>
         <session-timeout>
             30

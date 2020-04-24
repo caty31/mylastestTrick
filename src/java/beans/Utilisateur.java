@@ -103,6 +103,10 @@ public class Utilisateur {
     public void setOn(boolean on) {
         this.on = on;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Utilisateur{" + "email=" + email + ", motDePasse=" + motDePasse + ", id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", on=" + on + '}';
+    }
+
 }

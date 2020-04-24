@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import DAO.UserDAO;
 import beans.Utilisateur;
 import forms.InscriptionCheckForm;
 import java.io.IOException;
@@ -26,6 +27,8 @@ public class Inscription extends HttpServlet {
     private static final String ATT_USER = "utilisateur";
     public static final String VUE = "/WEB-INF/inscription.jsp";
 
+    
+    
     /* Requête GET sur notre formulaire => affichage du formulaire */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,17 +41,23 @@ public class Inscription extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         /* Préparation de l'objet formulaire */
         InscriptionCheckForm form = new InscriptionCheckForm();
         /*
- * Appel au traitement et à la validation de la requête, et
-récupération
- * du bean en résultant
+        * Appel au traitement et à la validation de la requête, et
+        récupération
+        * du bean en résultant
          */
         Utilisateur utilisateur = form.checkForm(request);
+        
+        
+        
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute(ATT_FORM, form);
         request.setAttribute(ATT_USER, utilisateur);
+        
+        
         this.getServletContext().getRequestDispatcher(VUE).forward(
                 request, response);
     }

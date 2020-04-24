@@ -17,12 +17,13 @@ public class test {
 
     public static void main(String[] args) {
         
-        
-        UserDAO udao = new UserDAO();
-        
-        udao.create(new Utilisateur("dessinanime@gmail.com",
-                "Tartantion", null, "Martin", "Matin", true));
         /*
+        UserDAO udao = new UserDAO();
+        Utilisateur uti = new Utilisateur("hip@gmail.com", "prout", null, "pipi", "caca", true);
+        
+        udao.create(uti);
+        
+        
         Utilisateur u1 = udao.find(4);
         u1.setOn(false);
         udao.update(u1);
