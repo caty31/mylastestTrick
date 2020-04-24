@@ -5,7 +5,6 @@
  */
 package beans;
 
-import static java.lang.reflect.Array.set;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
