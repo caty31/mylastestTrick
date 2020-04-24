@@ -19,23 +19,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="localhost:8084/MyLatestTricks/Accueil">MyLatestTricks</a>
+            <a class="navbar-brand" href="<c:url value="Accueil" />">MyLatestTricks</a>
         </div>
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="localhost:8084/MyLatestTricks/Inscription">Inscription <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="<c:url value="Inscription" />">Inscription <span class="sr-only">(current)</span></a></li>
             </ul>
             <form id="signin" class="navbar-form navbar-right" role="form">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
+                    
+                    <input id="email" type="email" class="form-control" name="email" value="<c:out
+                           value="${utilisateur.email}"/>" placeholder="Addresse Email" >
+                    
                 </div>
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+                    <input id="password" type="password" class="form-control" name="password" value="" placeholder="Mot De Passe">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Se connecter</button>

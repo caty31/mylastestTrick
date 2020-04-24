@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Will I Am
  */
-@WebServlet(name = "Inscription", urlPatterns = {"/inscription"})
+@WebServlet(name = "Inscription", urlPatterns = {"/Inscription"})
 public class Inscription extends HttpServlet {
 
     /* Des constantes */
