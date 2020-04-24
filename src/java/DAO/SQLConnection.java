@@ -33,9 +33,10 @@ public class SQLConnection {
     
     
     //fonction de connection à la database avec un fichier properties
-    public static final Connection getInstance() {
+    public static final Connection getInstance() throws ClassNotFoundException {
         if (connection == null) {
             try (InputStream in = SQLConnection.class.getResourceAsStream("/ressources/config.properties")) {
+                Class.forName("com.mysql.jdbc.Driver");
                 Properties config = new Properties();
                 config.load(in);
                 String url = "jdbc:" + config.getProperty("sgbd") + "://"

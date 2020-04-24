@@ -41,6 +41,16 @@
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
     
+    <!--mapping servlet inscription-->
+    <servlet>
+        <servlet-name>Inscription</servlet-name>
+        <servlet-class>servlets.Inscription</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Inscription</servlet-name>
+        <url-pattern>/Inscription</url-pattern>
+    </servlet-mapping>
+    
     
     <session-config>
         <session-timeout>
