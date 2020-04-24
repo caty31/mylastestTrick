@@ -16,6 +16,7 @@
         <link type="text/css" rel="stylesheet" href="inc/form.css" />
     </head>
     <body>
+        <%@include file="/WEB-INF/template/header.jsp" %>
         <form method="post" action="Connexion">
             <fieldset>
                 <legend>Connexion</legend>
@@ -30,7 +31,10 @@
                 <input type="password" id="motdepasse" name="motdepasse" value=""
                        size="8" maxlength="20" />
                 <span class="erreur">${form.erreurs['motdepasse']}</span>
-                <br /><input type="submit" value="Connexion" class="sansLabel" />
+
+                <div id="basduformulaire">
+                    <button type="submit"class="sansLabel"> Connexion</button>
+                </div>
                 <p class="${empty form.erreurs ? 'succes' :
                             'erreur'}">${form.resultat}</p>
                 <c:if test="${!empty sessionScope.sessionUtilisateur}">
@@ -42,5 +46,6 @@
                 </c:if>
             </fieldset>
         </form>
+        <%@include file="/WEB-INF/template/footer.jsp" %>
     </body>
 </html>

@@ -95,16 +95,16 @@ public class InscriptionCheckForm {
 // validation mot de passe
 
     private void validationMotsDePasse(String motDePasse, String confirmation
-    ) throws Exception {
+    )
+            throws Exception {
         if (motDePasse != null && confirmation != null) {
             if (!motDePasse.equals(confirmation)) {
                 throw new Exception("Les mots de passe entrés sont différents, merci de les saisir à nouveau.");
             } else if (motDePasse.length() < 5) {
-                throw new Exception("Le mot de passe doit contenir au moins 5 carractères.");
-
-            } else {
-                throw new Exception("Merci de saisir et confirmer votre mot depasse.");
+                throw new Exception("Les mots de passe doivent contenir au moins 5 caractères.");
             }
+        } else {
+            throw new Exception("Merci de saisir et confirmer votre mot depasse.");
         }
     }
 // validation nom

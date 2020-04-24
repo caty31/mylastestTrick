@@ -1,19 +1,22 @@
 body, p, legend, label, input {
-    font: normal 14pt verdana, helvetica, sans-serif;
+    font: normal 10pt verdana, helvetica, sans-serif;
 
 }
 
 fieldset {
-    padding: 10px;
+
     border: 1px #0568CD solid;
-    background-color: buttonhighlight;
+    background-color: #7da5da;
     border-radius: 15px;
-    margin-right:50%;
+    text-align: justify;
+    margin-left: 10px;
+
+
 }
 
 legend {
     font-weight: bold;
-    color: #0568CD;
+
 }
 
 /* Forms ------------------------------- */
@@ -22,6 +25,7 @@ form label {
     float: left;
     width: 200px;
     margin: 3px 0px 0px 0px;
+
 }
 
 form input {
@@ -45,4 +49,12 @@ form .requis {
 .succes{
     color:green;
 }
-
+#basduformulaire{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:270px;
+}
+button{
+    background-color: #529dff;
+    border-radius: 3px;
+}
