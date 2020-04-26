@@ -36,7 +36,7 @@
         <servlet-name>Accueil</servlet-name>
         <servlet-class>servlets.Accueil</servlet-class>
         <multipart-config>
-            <location>/images</location> <!-- Localisation dans la DDB (temporaire 'tampon') -->
+            <location>/home/stag/Documents/JAVA_JSE/ProjetJEE/temp</location> <!-- Localisation dans la DDB (temporaire 'tampon') -->
             <max-file-size>10485760</max-file-size>  <!-- 10Mo -->
             <max-request-size>52428800</max-request-size> <!-- 5x 10Mo -->
             <file-size-threshold>1048576</file-size-threshold> <!-- 1Mo -->

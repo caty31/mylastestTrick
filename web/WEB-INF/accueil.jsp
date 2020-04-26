@@ -21,7 +21,7 @@
         --%>
 
         <c:if test="${!empty video}"><p><c:out value="La vidéo ${video} (${description}) a été mise en ligne."/></p></c:if>
-            <form method="post" action="accueil" enctype="multipart/form-data">
+            <form method="post" action="Accueil" enctype="multipart/form-data">
 
                 <h3>Mettre en ligne une vidéo</h3>
                 <p>
