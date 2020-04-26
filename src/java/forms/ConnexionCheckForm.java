@@ -30,10 +30,15 @@ public class ConnexionCheckForm {
     }
 
     public Utilisateur checkForm(HttpServletRequest request) {
+        
         /* Récupération des champs du formulaire */
         String email = getValeurChamp(request, CHAMP_EMAIL);
         String motDePasse = getValeurChamp(request, CHAMP_PASS);
+        
+        
         Utilisateur utilisateur = new Utilisateur();
+        
+        
         /* Validation du champ email. */
         try {
             validationEmail(email);
@@ -41,6 +46,8 @@ public class ConnexionCheckForm {
             setErreur(CHAMP_EMAIL, e.getMessage());
         }
         utilisateur.setEmail(email);
+        
+        
         /* Validation du champ mot de passe. */
         try {
             validationMotDePasse(motDePasse);
@@ -49,6 +56,9 @@ public class ConnexionCheckForm {
             setErreur(CHAMP_PASS, e.getMessage());
         }
         utilisateur.setMotDePasse(motDePasse);
+        
+        
+        
         /* Initialisation du résultat global de la validation. */
         if (erreurs.isEmpty()) {
             resultat = "Succès de la connexion.";

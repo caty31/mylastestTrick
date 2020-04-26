@@ -101,7 +101,6 @@ public class InscriptionCheckForm {
             resultat = "Succès de l'inscription.";
             UserDAO udao = new UserDAO();
             udao.create(utilisateur);
-            System.out.println(utilisateur);
         } else {
             resultat = "Échec de l'inscription.";
         }

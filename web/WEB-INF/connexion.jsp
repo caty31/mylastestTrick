@@ -35,7 +35,7 @@
                 <span class="erreur">${form.erreurs['motdepasse']}</span>
 
                 <div id="basduformulaire">
-                    <button type="submit"class="sansLabel"> Connexion</button>
+                    <button type="submit" class="sansLabel"> Connexion</button>
                 </div>
                 <p class="${empty form.erreurs ? 'succes' :
                             'erreur'}">${form.resultat}</p>

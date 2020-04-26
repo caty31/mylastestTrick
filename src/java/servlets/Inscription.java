@@ -5,7 +5,6 @@
  */
 package servlets;
 
-import DAO.UserDAO;
 import beans.Utilisateur;
 import forms.InscriptionCheckForm;
 import java.io.IOException;

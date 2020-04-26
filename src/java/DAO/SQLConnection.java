@@ -33,7 +33,7 @@ public class SQLConnection {
     
     
     //fonction de connection à la database avec un fichier properties
-    public static final Connection getInstance() throws ClassNotFoundException {
+    public static final Connection getInstance()  {
         if (connection == null) {
             try (InputStream in = SQLConnection.class.getResourceAsStream("/ressources/config.properties")) {
                 Class.forName("com.mysql.jdbc.Driver");
@@ -46,7 +46,7 @@ public class SQLConnection {
                 connection = DriverManager.getConnection(url, config);
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(SQLConnection.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException | SQLException ex) {
+            } catch (IOException | SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(SQLConnection.class.getName()).log(Level.SEVERE, null, ex);
             }
         }

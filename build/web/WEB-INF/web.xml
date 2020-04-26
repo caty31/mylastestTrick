@@ -46,10 +46,7 @@
         <servlet-name>Accueil</servlet-name>
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
-<<<<<<< HEAD
 
-
-=======
     
     <!--mapping servlet inscription-->
     <servlet>
@@ -62,7 +59,7 @@
     </servlet-mapping>
     
     
->>>>>>> v3
+
     <session-config>
         <session-timeout>
             30
