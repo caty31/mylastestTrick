@@ -5,10 +5,12 @@
  */
 package forms;
 
+import DAO.UserDAO;
 import beans.Utilisateur;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import static util.hachage.hacher;
 
 /**
  *
@@ -17,8 +19,10 @@ import javax.servlet.http.HttpServletRequest;
 public class ConnexionCheckForm {
 
     private static final String CHAMP_EMAIL = "email";
-    private static final String CHAMP_PASS = "motdepasse";
+    private static final String CHAMP_PASS = "password";
+    
     private String resultat;
+    
     private final Map<String, String> erreurs = new HashMap<>();
 
     public String getResultat() {
@@ -38,7 +42,6 @@ public class ConnexionCheckForm {
         
         Utilisateur utilisateur = new Utilisateur();
         
-        
         /* Validation du champ email. */
         try {
             validationEmail(email);
@@ -51,16 +54,19 @@ public class ConnexionCheckForm {
         /* Validation du champ mot de passe. */
         try {
             validationMotDePasse(motDePasse);
-
+            //hachage du mot de passe pour verifier qu'il existe en bdd
+            motDePasse = hacher(motDePasse);
         } catch (Exception e) {
             setErreur(CHAMP_PASS, e.getMessage());
         }
         utilisateur.setMotDePasse(motDePasse);
         
+        //instanciation pour pouvoir utiliser la fonciton de recherche utilisateur
+        UserDAO udao = new UserDAO();
         
-        
+
         /* Initialisation du résultat global de la validation. */
-        if (erreurs.isEmpty()) {
+        if (erreurs.isEmpty() && udao.find(email,motDePasse)) {
             resultat = "Succès de la connexion.";
         } else {
             resultat = "Échec de la connexion.";

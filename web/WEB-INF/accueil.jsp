@@ -14,7 +14,7 @@
         <link type="text/css" rel="stylesheet" href="<c:url value="/inc/form.css"/>" />
     </head>
     <body>
-        <%@include file="template/header.jsp" %>
+        <%@include file="/WEB-INF/template/header.jsp" %>
         <h2>Top :</h2>
         <%--
         <img id="imgAccueil" src="<c:url value ="/images/skateboard.png"/>" alt="nom">

@@ -122,4 +122,26 @@ public class UserDAO extends DAO<Utilisateur>{
         return utilisateurs;
     }
 
+    
+    
+    public boolean find(String email, String mdp) {
+        
+        boolean bool = false;
+        
+        try {
+            String req = "SELECT * FROM Utilisateur WHERE emailMenbre=? AND motDePasse=?";
+            PreparedStatement pstmt = connection.prepareStatement(req);
+            pstmt.setString(1, email);
+            pstmt.setString(2, mdp);
+            ResultSet result = pstmt.executeQuery();
+            if (result.first()) {
+                bool = true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return bool;
+    }
+    
 }
