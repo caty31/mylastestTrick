@@ -8,6 +8,7 @@ package util;
 
 import beans.Utilisateur;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *
@@ -21,6 +22,23 @@ public class hachage {
 
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         md.update(password.getBytes());
+
+        byte byteData[] = md.digest();
+
+        //convertir le tableau de bits en une format hexadécimal
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < byteData.length; i++) {
+         sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        }
+        
+        return sb.toString();
+    }
+    
+    
+    public static String hacher(String mdp) throws NoSuchAlgorithmException {       
+
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        md.update(mdp.getBytes());
 
         byte byteData[] = md.digest();
 

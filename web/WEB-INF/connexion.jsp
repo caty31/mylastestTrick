@@ -21,17 +21,14 @@
             <fieldset>
                 <legend>Connexion</legend>
                 <p>Veuillez vous connectez à votre compte.</p>
-                <label for="email">Adresse email <span
-                        class="requis">* </span></label>
-                        
-                <input type="email" id="email" name="email" value="<c:out
-                           value="${utilisateur.email}"/>" size="8" maxlength="25" />
-                
+                <label for="email">Adresse email <span class="requis">* </span></label>  
+                <input type="email" id="email" name="email" value="<c:out value="${utilisateur.email}"/>" size="8" maxlength="25" />
                 <span class="erreur">${form.erreurs['email']}</span>
-                <br /><label for="motdepasse">Mot de passe <span
-                        class="requis">*</span></label>
-                <input type="password" id="motdepasse" name="motdepasse" value=""
-                       size="8" maxlength="20" />
+                
+                <br />
+                
+                <label for="motdepasse">Mot de passe <span class="requis">*</span></label>
+                <input type="password" id="motdepasse" name="motdepasse" value="" size="8" maxlength="20" />
                 <span class="erreur">${form.erreurs['motdepasse']}</span>
 
                 <div id="basduformulaire">
