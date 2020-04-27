@@ -11,31 +11,78 @@
         <title>MyLatestTricks</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="<c:url value="/inc/form.css"/>" />
+        <link type="text/css" rel="stylesheet" href="<c:url value="/inc/form2.css"/>" />
     </head>
     <body>
         <%@include file="/WEB-INF/template/header.jsp" %>
-        <h2>Top :</h2>
-        <%--
-        <img id="imgAccueil" src="<c:url value ="/images/skateboard.png"/>" alt="nom">
-        --%>
+        <div class="row">
+            <div class="col-xs-6"> 
 
-        <c:if test="${!empty video}"><p><c:out value="La vidéo ${video} (${description}) a été mise en ligne."/></p></c:if>
-            <form method="post" action="Accueil" enctype="multipart/form-data">
+                <%--
+                <img id="imgAccueil" src="<c:url value ="/images/skateboard.png"/>" alt="nom">
+                --%>
 
-                <h3>Mettre en ligne une vidéo</h3>
-                <p>
-                    <label for="video">Selectionner une vidéo : </label>
-                    <input type="file" name="video" id="video"/>
-                </p>
-                <p>
-                    <label for="description">Description de la vidéo : </label>
-                    <input type="text" name="description" id="description"/>
-                </p>
+                <c:if test="${!empty video}"><p><c:out value="La vidéo ${video} (${description}) a été mise en ligne."/></p></c:if>
+                    <form method="post" action="Accueil" enctype="multipart/form-data">
+                        <fieldset class="form1">
 
-                <input type="submit"/>
+                            <h3>Mettre en ligne une vidéo</h3>
+                            <p>
+                                <label for="video">Selectionner une vidéo : </label>
+                                <input type="file" name="video" id="video"/>
+                            </p>
+                            <p>
+                                <label for="description">Description de la vidéo : </label>
+                                <input type="text" name="description" id="description"/>
+                            </p>
 
-            </form>
+                            <input type="submit"/>
+                        </fieldset>
+
+                    </form>
+                    <fieldset class="form2">
+
+                        <h3>Commentez une video</h3>
+                        <p>
+                            <label for="nom"> Saisissez votre Nom : </label>
+                            <input type="text" name="nom"value="<c:out value="${utilisateur.nom}" />" size="40" maxlength="50"/>
+                    </p>
+                    <p>
+                        <label id="com" for="contenu" row="5">Tapez votre commentaire : </label>
+                        <textarea name="contenu" rows="5"required value="<c:out value="${commentaire.contenu}"/>" size="20" maxlength="50" /></textarea>
+
+                    </p>
+
+                    <input type="submit"/>
+                </fieldset>
+
+
+            </div>
+
+
+            <div  class="col-xs-6" > 
+
+                <h1>Top trois des  Videos du mois  :</h1>
+
+
+
+                <video width="800" height="600" controls>
+                    <source src= <c:url value="/images/video2.mp4"/> type="video/mp4">
+                </video>
+                <p class="videoPoste"> <h2>MyLastest Tricks: video numero 1 </h2></p>
+
+                <video width="800" height="600" controls>
+                    <source src= <c:url value="/images/video1.mp4"/> type="video/mp4">
+                </video>
+                <p class="videoPoste"> <h2>MyLastest Tricks: video numero 2 </h2></p>
+                <video width="800" height="600" controls>
+                    <source src= <c:url value="/images/video3.mp4"/> type="video/mp4">
+                </video>
+                <p class="videoPoste"><h2>MyLastest Tricks: video numero 3</h2> </p>
+
+            </div>
+        </div>
+
 
         <%@include file="template/footer.jsp" %>
     </body>
