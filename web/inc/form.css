@@ -1,17 +1,16 @@
-body, p, legend, label, input {
-    font: normal 10pt verdana, helvetica, sans-serif;
+
+.row{
+    background-color: #a5e0e0;
 }
 
 fieldset {
-
     border: 1px #0568CD solid;
-    background-color: #7da5da;
     border-radius: 15px;
     text-align: justify;
     margin-left: 10px;
-
-
+    background-color: #0e7676;
 }
+
 
 legend {
     font-weight: bold;
@@ -38,7 +37,7 @@ form input.sansLabel {
 }
 
 form .requis {
-    color: #c00;
+    color:red;
 }
 
 .erreur {

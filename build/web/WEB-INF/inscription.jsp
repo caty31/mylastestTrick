@@ -40,18 +40,18 @@
                         <input type="text" id="email" name="email" value="<c:out value="${utilisateur.email}" />" size="20" maxlength="60" />
                         <span class='erreur'>${form.erreurs.email}</span>
                         <br />
-                        
+
                         <img src="<c:url value ="/images/password.jpg"/>" width="50" height="50" alt="motDePasse">
                         <label for="motdepasse">Mot de passe <span class="requis">*</span> </label>
                         <input type="password" id="motdepasse" name="motdepasse" value="" size="20" maxlength="20" />                
                         <span class='erreur'>${form.erreurs.motdepasse}</span>
                         <br />
-                        
+
                         <img src="<c:url value ="/images/confirme.jpg"/>" width="50" height="50" alt="confirme">
                         <label for="confirmation">Confirmation <span class="requis">*</span> </label>
                         <input type="password" id="confirmation" name="confirmation" value="" size="20" maxlength="20" />
                         <br />
-                        
+
                         <div id="basduformulaire">
                             <button  type="submit" value="submit" class="sansLabel"> VALIDER </button>
                             <button  type="reset" value="clear form"  class="sansLabel"> ANNULER </button>
