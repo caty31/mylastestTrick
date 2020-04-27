@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="./inc/footerStyle.css"/>
 
 <div id="footer">
-    <p class="gauche">&copy;By Caty MAGHWE, Mehdi TALEB, Vincent THOMAS, William HOYEZ</p>
+    <p class="gauche">&copy;By Caty MAHGWE, Mehdi TALEB, Vincent THOMAS, William HOYEZ</p>
     <nav class="mentions">
         <p><a>Mentions légales</a></p>
 </div>

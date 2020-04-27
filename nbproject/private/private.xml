@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/home/stag/Documents/JAVA_JSE/ProjetJEE/MyLatestTricks/src/java/servlets/Connexion.java</file>
-            <file>file:/home/stag/Documents/JAVA_JSE/ProjetJEE/MyLatestTricks/web/WEB-INF/inscription.jsp</file>
-            <file>file:/home/stag/Documents/JAVA_JSE/ProjetJEE/MyLatestTricks/web/WEB-INF/accueil.jsp</file>
-            <file>file:/home/stag/Documents/JAVA_JSE/ProjetJEE/MyLatestTricks/web/WEB-INF/web.xml</file>
-            <file>file:/home/stag/Documents/JAVA_JSE/ProjetJEE/MyLatestTricks/src/java/servlets/Accueil.java</file>
-=======
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/WEB-INF/accueil.jsp</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/inc/form2.css</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/WEB-INF/web.xml</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/inc/form.css</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/src/java/beans/Commentaire.java</file>
-            <file>file:/home/stag/Documents/JEE/MyLatestTricks/web/WEB-INF/inscription.jsp</file>
->>>>>>> 9c98b75606fc6591b439b767181d8b8b77eb9494
-        </group>
+        <group/>
     </open-files>
 </project-private>
