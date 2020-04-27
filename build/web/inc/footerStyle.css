@@ -13,3 +13,7 @@ a {
     font-style: italic;
     color: black;
 }
+
+.gauche {
+    float: left;
+}
